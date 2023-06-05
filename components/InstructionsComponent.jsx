@@ -22,8 +22,6 @@ const tokenContract = new ethers.Contract(tokenAddress,tokenABI.abi, signer)
 export default function InstructionsComponent() {
 	const router = useRouter();
 
-	const {data: signer, isError, isLoading } = useSigner();
-
 	return (
 		<div className={styles.container}>
 			<header className={styles.header_container}>

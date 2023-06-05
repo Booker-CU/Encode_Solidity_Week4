@@ -165,7 +165,9 @@ function requestTokens(signer, signature, setLoading, setTxData) {
 
 function delegateTokens(address) {
 	const {data: signer} = useSigner();
-	tokenContract.connect(signer).mint()
+	
+	//delegate is not present ERROR***
+	tokenContract.connect(signer).delegate(signer.address)
 }
 
 function vote() {
